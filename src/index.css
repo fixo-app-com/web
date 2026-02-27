@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-fixo-50: #eef2ff;
+  --color-fixo-100: #e0e7ff;
+  --color-fixo-200: #c7d2fe;
+  --color-fixo-300: #a5b4fc;
+  --color-fixo-400: #818cf8;
+  --color-fixo-500: #6366f1;
+  --color-fixo-600: #4f46e5;
+  --color-fixo-700: #4338ca;
+  --color-fixo-800: #3730a3;
+  --color-fixo-900: #312e81;
+  --color-fixo-950: #1e1b4b;
+}
