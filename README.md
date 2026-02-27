@@ -17,8 +17,8 @@ Landing page for **Fixo**, a personal finance management app. Built with React 1
 
 ## Prerequisites
 
-- Node.js >= 20
 - npm
+- Node.js >= 20
 
 ## Getting Started
 
@@ -34,20 +34,20 @@ The app runs at `http://localhost:5173` by default.
 
 ## Scripts
 
-| Command            | Description                                |
-| ------------------ | ------------------------------------------ |
-| `npm run dev`      | Start Vite dev server with HMR             |
-| `npm run build`    | Production build to `dist/`                |
-| `npm run preview`  | Preview production build locally           |
-| `npm run lint`     | Run ESLint                                 |
-| `npm run lint:fix` | Run ESLint with auto-fix                   |
-| `npm run format`   | Format source files with Prettier          |
-| `npm run test`     | Run unit tests (Vitest)                    |
-| `npm run test:watch` | Run unit tests in watch mode             |
-| `npm run typecheck`| Run TypeScript compiler checks             |
-| `npm run e2e`      | Run Cypress E2E tests (headless)           |
-| `npm run e2e:open` | Open Cypress test runner                   |
-| `npm run deploy`   | Build and deploy to Firebase Hosting       |
+| Command              | Description                          |
+| -------------------- | ------------------------------------ |
+| `npm run dev`        | Start Vite dev server with HMR       |
+| `npm run build`      | Production build to `dist/`          |
+| `npm run preview`    | Preview production build locally     |
+| `npm run lint`       | Run ESLint                           |
+| `npm run lint:fix`   | Run ESLint with auto-fix             |
+| `npm run format`     | Format source files with Prettier    |
+| `npm run test`       | Run unit tests (Vitest)              |
+| `npm run test:watch` | Run unit tests in watch mode         |
+| `npm run typecheck`  | Run TypeScript compiler checks       |
+| `npm run e2e`        | Run Cypress E2E tests (headless)     |
+| `npm run e2e:open`   | Open Cypress test runner             |
+| `npm run deploy`     | Build and deploy to Firebase Hosting |
 
 ## Project Structure
 
