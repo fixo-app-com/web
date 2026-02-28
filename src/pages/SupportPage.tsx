@@ -17,10 +17,10 @@ export default function SupportPage(): React.JSX.Element {
             <p className="text-gray-600 leading-relaxed">
               Need help or have a question? Email us at{" "}
               <a
-                href="mailto:support@fixoapp.com"
+                href="mailto:support@fixo-app.com"
                 className="text-fixo-500 hover:underline"
               >
-                support@fixoapp.com
+                support@fixo-app.com
               </a>
               . We typically respond within 48 hours.
             </p>
@@ -31,10 +31,10 @@ export default function SupportPage(): React.JSX.Element {
             <p className="text-gray-600 leading-relaxed">
               To delete your account and all associated data, email{" "}
               <a
-                href="mailto:support@fixoapp.com"
+                href="mailto:support@fixo-app.com"
                 className="text-fixo-500 hover:underline"
               >
-                support@fixoapp.com
+                support@fixo-app.com
               </a>{" "}
               with the email address linked to your account. We will process
               your request within 30 days.

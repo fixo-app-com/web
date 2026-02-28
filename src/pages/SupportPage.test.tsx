@@ -22,12 +22,12 @@ describe("SupportPage", () => {
       </MemoryRouter>,
     );
     const emailLinks = screen.getAllByRole("link", {
-      name: "support@fixoapp.com",
+      name: "support@fixo-app.com",
     });
     expect(emailLinks.length).toBeGreaterThan(0);
     expect(emailLinks[0]).toHaveAttribute(
       "href",
-      "mailto:support@fixoapp.com",
+      "mailto:support@fixo-app.com",
     );
   });
 

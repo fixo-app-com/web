@@ -8,7 +8,7 @@ describe("Support page", () => {
   });
 
   it("renders the contact email", () => {
-    cy.get('a[href="mailto:support@fixoapp.com"]').should("exist");
+    cy.get('a[href="mailto:support@fixo-app.com"]').should("exist");
   });
 
   it("renders account deletion information", () => {

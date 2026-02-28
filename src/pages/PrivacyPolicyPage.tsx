@@ -84,10 +84,10 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
               Your data is retained as long as your account exists. To request
               deletion of your account and all associated data, contact us at{" "}
               <a
-                href="mailto:support@fixoapp.com"
+                href="mailto:support@fixo-app.com"
                 className="text-fixo-500 hover:underline"
               >
-                support@fixoapp.com
+                support@fixo-app.com
               </a>
               . We will process your request within 30 days.
             </p>
@@ -120,10 +120,10 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
             <p className="text-gray-600 leading-relaxed">
               If you have questions about this Privacy Policy, contact us at{" "}
               <a
-                href="mailto:support@fixoapp.com"
+                href="mailto:support@fixo-app.com"
                 className="text-fixo-500 hover:underline"
               >
-                support@fixoapp.com
+                support@fixo-app.com
               </a>
               .
             </p>
