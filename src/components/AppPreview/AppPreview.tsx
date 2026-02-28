@@ -166,10 +166,7 @@ function WalletsScreen(): React.JSX.Element {
         ))}
       </div>
       <div className="flex justify-end mt-6">
-        <div className="bg-fixo-500 rounded-full px-4 py-2 flex items-center gap-1">
-          <span className="text-white text-sm font-semibold leading-none">
-            +
-          </span>
+        <div className="bg-fixo-500 rounded-full px-4 py-2 flex items-center">
           <span className="text-white text-[10px] font-semibold">
             Add wallet
           </span>

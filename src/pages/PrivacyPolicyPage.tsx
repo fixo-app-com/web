@@ -30,8 +30,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
             <ul className="list-disc pl-5 text-gray-600 leading-relaxed space-y-2">
               <li>
                 <strong>Account information</strong> — email address and
-                authentication credentials via Firebase Auth (email/password or
-                Google OAuth).
+                authentication credentials via Firebase Auth (email/password).
               </li>
               <li>
                 <strong>Financial data you enter</strong> — expenses, categories,
@@ -81,15 +80,16 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
               Data Retention &amp; Deletion
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Your data is retained as long as your account exists. To request
-              deletion of your account and all associated data, contact us at{" "}
+              Your data is retained as long as your account exists. You can
+              delete your account and all associated data directly from the
+              app in Settings. Alternatively, contact us at{" "}
               <a
                 href="mailto:support@fixo-app.com"
                 className="text-fixo-500 hover:underline"
               >
                 support@fixo-app.com
-              </a>
-              . We will process your request within 30 days.
+              </a>{" "}
+              and we will process your request within 30 days.
             </p>
           </section>
 
