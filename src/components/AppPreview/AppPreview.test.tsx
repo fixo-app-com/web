@@ -3,22 +3,30 @@ import { describe, it, expect } from "vitest";
 import AppPreview from "./AppPreview";
 
 describe("AppPreview", () => {
-  it("renders the total amount", () => {
+  it("renders the section heading", () => {
     render(<AppPreview />);
-    expect(screen.getByText("Spese fisse mensili")).toBeInTheDocument();
+    expect(screen.getByText("Everything at a glance")).toBeInTheDocument();
   });
 
-  it("renders all categories", () => {
+  it("renders phone screen content", () => {
     render(<AppPreview />);
-    expect(screen.getByText("Casa")).toBeInTheDocument();
-    expect(screen.getByText("Trasporti")).toBeInTheDocument();
-    expect(screen.getByText("Abbonamenti")).toBeInTheDocument();
-    expect(screen.getByText("Assicurazioni")).toBeInTheDocument();
+    expect(screen.getAllByText("Housing").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("Transport").length).toBeGreaterThanOrEqual(1);
+    expect(
+      screen.getAllByText("Subscriptions").length,
+    ).toBeGreaterThanOrEqual(1);
   });
 
-  it("renders all accounts", () => {
+  it("renders slider dots on mobile", () => {
     render(<AppPreview />);
-    expect(screen.getByText("Conto Principale")).toBeInTheDocument();
-    expect(screen.getByText("Conto Secondario")).toBeInTheDocument();
+    expect(
+      screen.getByLabelText("View Home screen"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByLabelText("View Wallets screen"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByLabelText("View Emergency Fund screen"),
+    ).toBeInTheDocument();
   });
 });

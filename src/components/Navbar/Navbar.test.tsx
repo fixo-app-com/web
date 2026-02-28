@@ -3,13 +3,13 @@ import { describe, it, expect } from "vitest";
 import Navbar from "./Navbar";
 
 describe("Navbar", () => {
-  it("renders the brand name", () => {
+  it("renders the logo image", () => {
     render(<Navbar />);
-    expect(screen.getByText("fixo")).toBeInTheDocument();
+    expect(screen.getByAltText("Fixo")).toBeInTheDocument();
   });
 
-  it("renders the CTA link", () => {
+  it("renders the download link", () => {
     render(<Navbar />);
-    expect(screen.getByText("Inizia Gratis")).toBeInTheDocument();
+    expect(screen.getByText("Download")).toBeInTheDocument();
   });
 });

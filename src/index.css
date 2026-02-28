@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  background-color: #030712; /* gray-950 */
+  background-color: #f8fafc; /* gray-100 — matches app ScreenWrapper bg */
 }
 
 @theme {

@@ -5,12 +5,11 @@ import Hero from "./Hero";
 describe("Hero", () => {
   it("renders the main heading", () => {
     render(<Hero />);
-    expect(screen.getByText("spendi ogni mese?")).toBeInTheDocument();
+    expect(screen.getByText("crystal clear")).toBeInTheDocument();
   });
 
-  it("renders both CTA buttons", () => {
+  it("renders the App Store badge", () => {
     render(<Hero />);
-    expect(screen.getByText("Prova Fixo Gratis")).toBeInTheDocument();
-    expect(screen.getByText("Scopri di più")).toBeInTheDocument();
+    expect(screen.getByText("App Store")).toBeInTheDocument();
   });
 });

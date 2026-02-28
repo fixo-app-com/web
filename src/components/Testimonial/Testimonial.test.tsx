@@ -3,17 +3,17 @@ import { describe, it, expect } from "vitest";
 import Testimonial from "./Testimonial";
 
 describe("Testimonial", () => {
-  it("renders the testimonial quote", () => {
+  it("renders the first testimonial quote", () => {
     render(<Testimonial />);
     expect(
-      screen.getByText(/Finalmente so esattamente dove vanno i miei soldi/),
+      screen.getByText(/72% of my salary was already committed/),
     ).toBeInTheDocument();
   });
 
-  it("renders the author", () => {
+  it("renders navigation dots for all reviews", () => {
     render(<Testimonial />);
-    expect(
-      screen.getByText("Marco R. — Libero professionista"),
-    ).toBeInTheDocument();
+    expect(screen.getByLabelText("Go to review 1")).toBeInTheDocument();
+    expect(screen.getByLabelText("Go to review 2")).toBeInTheDocument();
+    expect(screen.getByLabelText("Go to review 3")).toBeInTheDocument();
   });
 });

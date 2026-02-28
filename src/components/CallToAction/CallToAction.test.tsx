@@ -5,13 +5,11 @@ import CallToAction from "./CallToAction";
 describe("CallToAction", () => {
   it("renders the heading", () => {
     render(<CallToAction />);
-    expect(
-      screen.getByText("Inizia a usare Fixo oggi"),
-    ).toBeInTheDocument();
+    expect(screen.getByText("Know your real budget")).toBeInTheDocument();
   });
 
-  it("renders the CTA button", () => {
+  it("renders the App Store badge", () => {
     render(<CallToAction />);
-    expect(screen.getByText("Prova Fixo Gratis")).toBeInTheDocument();
+    expect(screen.getByText("App Store")).toBeInTheDocument();
   });
 });

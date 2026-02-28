@@ -10,29 +10,29 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: "📌",
-    title: "Spese Fisse",
-    desc: "Registra tutte le tue spese ricorrenti mensili in un unico posto. Niente più sorprese a fine mese.",
+    title: "Only Fixed Costs",
+    desc: "No daily coffee tracking. Fixo is built for the expenses you can't avoid — rent, utilities, insurance, subscriptions, loans.",
   },
   {
-    icon: "🏷️",
-    title: "Macro Categorie",
-    desc: "Organizza le spese in categorie personalizzate: casa, trasporti, abbonamenti, assicurazioni e altro.",
+    icon: "💰",
+    title: "Income Clarity",
+    desc: "See at a glance how much of your monthly income is already committed to fixed costs, and how much you truly have left.",
   },
   {
     icon: "🏦",
-    title: "Conti Bancari",
-    desc: "Assegna ogni spesa al conto da cui viene addebitata. Vedi quanto esce da ciascun conto.",
+    title: "Per-Wallet Breakdown",
+    desc: "Create wallets for your accounts and assign each expense to one. See how much flows out of each wallet every month — no bank linking needed.",
   },
   {
-    icon: "📊",
-    title: "Totale & Ripartizione",
-    desc: "Visualizza il totale delle spese fisse e la suddivisione per conto bancario in un colpo d'occhio.",
+    icon: "🛡️",
+    title: "Emergency Fund",
+    desc: "Mark expenses as essential and let Fixo calculate how much you need to save for 3 to 60 months of safety net.",
   },
 ];
 
 export default function Features(): React.JSX.Element {
   return (
-    <section id="features" className="px-6 py-24 bg-gray-900/50">
+    <section id="features" className="px-6 pt-12 pb-24">
       <div className="max-w-6xl mx-auto">
         <motion.div
           variants={fadeUp}
@@ -41,12 +41,12 @@ export default function Features(): React.JSX.Element {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-            Tutto quello che ti serve
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 text-gray-900">
+            Built for what matters
           </h2>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            Semplice, veloce e pensato per chi vuole avere il controllo sulle
-            proprie spese ricorrenti.
+          <p className="text-gray-500 text-lg max-w-xl mx-auto">
+            Fixo doesn&apos;t track every purchase — it gives you full
+            transparency on the recurring costs that silently eat your income.
           </p>
         </motion.div>
 
@@ -59,11 +59,13 @@ export default function Features(): React.JSX.Element {
               whileInView="visible"
               viewport={{ once: true }}
               custom={i}
-              className="bg-gray-900 rounded-2xl p-7 border border-gray-800 hover:border-fixo-700 hover:shadow-lg hover:shadow-fixo-950/50 transition-all duration-300"
+              className="bg-white rounded-2xl p-7 border border-gray-100 hover:border-fixo-300 hover:shadow-md transition-all duration-300"
             >
               <span className="text-3xl mb-4 block">{f.icon}</span>
-              <h3 className="text-lg font-bold mb-2">{f.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
+              <h3 className="text-lg font-bold mb-2 text-gray-900">
+                {f.title}
+              </h3>
+              <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
             </motion.div>
           ))}
         </div>

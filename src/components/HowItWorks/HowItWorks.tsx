@@ -10,24 +10,24 @@ interface Step {
 const steps: Step[] = [
   {
     step: "01",
-    title: "Aggiungi i tuoi conti",
-    desc: "Inserisci i conti bancari da cui vengono addebitate le spese.",
+    title: "Name your wallets",
+    desc: "Create a wallet for each account you pay bills from — no linking required, just a name.",
   },
   {
     step: "02",
-    title: "Crea le categorie",
-    desc: "Organizza le spese in macro categorie come casa, trasporti, abbonamenti.",
+    title: "Organize by category",
+    desc: "Group your fixed costs into categories like Housing, Transport, Insurance, or Subscriptions.",
   },
   {
     step: "03",
-    title: "Registra le spese fisse",
-    desc: "Aggiungi ogni spesa ricorrente e assegnala a categoria e conto. Fixo fa il resto.",
+    title: "See your real picture",
+    desc: "Instantly know how much of your income is locked in, per category and per account.",
   },
 ];
 
 export default function HowItWorks(): React.JSX.Element {
   return (
-    <section className="px-6 py-24">
+    <section className="px-6 py-24 bg-white">
       <div className="max-w-4xl mx-auto">
         <motion.div
           variants={fadeUp}
@@ -36,11 +36,11 @@ export default function HowItWorks(): React.JSX.Element {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-            Come funziona
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 text-gray-900">
+            How it works
           </h2>
-          <p className="text-gray-400 text-lg">
-            Tre semplici passaggi per avere tutto sotto controllo.
+          <p className="text-gray-500 text-lg">
+            Three steps to full clarity on your fixed costs.
           </p>
         </motion.div>
 
@@ -55,11 +55,13 @@ export default function HowItWorks(): React.JSX.Element {
               custom={i}
               className="text-center"
             >
-              <span className="text-5xl font-extrabold text-fixo-900 block mb-3">
+              <span className="text-5xl font-extrabold text-fixo-200 block mb-3">
                 {s.step}
               </span>
-              <h3 className="text-lg font-bold mb-2">{s.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+              <h3 className="text-lg font-bold mb-2 text-gray-900">
+                {s.title}
+              </h3>
+              <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}
         </div>
