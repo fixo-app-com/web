@@ -1,22 +1,30 @@
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import AppPreview from "./components/AppPreview/AppPreview";
-import Features from "./components/Features/Features";
-import HowItWorks from "./components/HowItWorks/HowItWorks";
-import Testimonial from "./components/Testimonial/Testimonial";
-import CallToAction from "./components/CallToAction/CallToAction";
 import Footer from "./components/Footer/Footer";
+import HomePage from "./pages/HomePage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import SupportPage from "./pages/SupportPage";
+
+function ScrollToTop(): null {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App(): React.JSX.Element {
   return (
     <div className="min-h-screen text-gray-900 overflow-x-hidden">
+      <ScrollToTop />
       <Navbar />
-      <Hero />
-      <AppPreview />
-      <Features />
-      <HowItWorks />
-      <Testimonial />
-      <CallToAction />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/privacy" element={<PrivacyPolicyPage />} />
+        <Route path="/support" element={<SupportPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
       <Footer />
     </div>
   );

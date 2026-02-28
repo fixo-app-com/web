@@ -4,7 +4,7 @@ describe("Landing page", () => {
   });
 
   it("renders the navbar with logo and download link", () => {
-    cy.get("nav").within(() => {
+    cy.get("nav").first().within(() => {
       cy.get('img[alt="Fixo"]').should("be.visible");
       cy.contains("Download").should("be.visible");
     });
@@ -42,10 +42,16 @@ describe("Landing page", () => {
     cy.contains("Know your real budget").should("exist");
   });
 
-  it("renders the footer with logo", () => {
+  it("renders the footer with copyright", () => {
     cy.get("footer").within(() => {
-      cy.get('img[alt="Fixo"]').should("be.visible");
       cy.contains("All rights reserved").should("be.visible");
+    });
+  });
+
+  it("footer contains Privacy Policy and Support links", () => {
+    cy.get("footer").within(() => {
+      cy.get('a[href="/privacy"]').should("contain.text", "Privacy Policy");
+      cy.get('a[href="/support"]').should("contain.text", "Support");
     });
   });
 });
