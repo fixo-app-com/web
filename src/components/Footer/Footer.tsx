@@ -12,6 +12,12 @@ export default function Footer(): React.JSX.Element {
             Privacy Policy
           </Link>
           <Link
+            to="/terms"
+            className="text-sm text-gray-400 hover:text-gray-600"
+          >
+            Terms of Service
+          </Link>
+          <Link
             to="/support"
             className="text-sm text-gray-400 hover:text-gray-600"
           >

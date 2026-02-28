@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsOfServicePage from "./pages/TermsOfServicePage";
 import SupportPage from "./pages/SupportPage";
 
 function ScrollToTop(): null {
@@ -22,6 +23,7 @@ function App(): React.JSX.Element {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/privacy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms" element={<TermsOfServicePage />} />
         <Route path="/support" element={<SupportPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
