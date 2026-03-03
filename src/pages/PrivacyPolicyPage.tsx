@@ -11,7 +11,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
         <div className="bg-white rounded-2xl border border-gray-100 p-8">
           <h1 className="text-3xl font-bold mb-2">Privacy Policy</h1>
           <p className="text-sm text-gray-400 mb-8">
-            Effective date: February 28, 2026
+            Effective date: March 1, 2026
           </p>
 
           <section className="mb-8">
@@ -33,13 +33,21 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
                 authentication credentials via Firebase Auth (email/password).
               </li>
               <li>
-                <strong>Financial data you enter</strong> — expenses, categories,
-                wallets, budget settings, and currency preferences.
+                <strong>Financial data you enter</strong> — expenses,
+                categories, wallets, budget settings, and currency preferences.
+              </li>
+              <li>
+                <strong>Crash data</strong> — we use Firebase Crashlytics to
+                automatically collect anonymous crash reports and diagnostic
+                information when the app encounters an error. This data is not
+                linked to your identity and is used solely to improve app
+                stability. It is not used for advertising, tracking, or shared
+                with third parties beyond Firebase infrastructure.
               </li>
             </ul>
             <p className="text-gray-600 leading-relaxed mt-3">
-              We do <strong>not</strong> collect location data, contacts, photos,
-              device identifiers, analytics, or crash reports.
+              We do <strong>not</strong> collect location data, contacts,
+              photos, device identifiers, or advertising data.
             </p>
           </section>
 
@@ -69,9 +77,10 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
           <section className="mb-8">
             <h2 className="text-xl font-semibold mb-3">Data Sharing</h2>
             <p className="text-gray-600 leading-relaxed">
-              We do not sell, rent, or share your personal information with third
-              parties. Firebase (Google) acts as our infrastructure provider and
-              processes data on our behalf under their terms of service.
+              We do not sell, rent, or share your personal information with
+              third parties. Firebase (Google) acts as our infrastructure
+              provider and processes data on our behalf under their terms of
+              service.
             </p>
           </section>
 
@@ -81,8 +90,8 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
             </h2>
             <p className="text-gray-600 leading-relaxed">
               Your data is retained as long as your account exists. You can
-              delete your account and all associated data directly from the
-              app in Settings. Alternatively, contact us at{" "}
+              delete your account and all associated data directly from the app
+              in Settings. Alternatively, contact us at{" "}
               <a
                 href="mailto:support@fixo-app.com"
                 className="text-fixo-500 hover:underline"
@@ -94,9 +103,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-xl font-semibold mb-3">
-              Children's Privacy
-            </h2>
+            <h2 className="text-xl font-semibold mb-3">Children's Privacy</h2>
             <p className="text-gray-600 leading-relaxed">
               Fixo is not directed at children under 13. We do not knowingly
               collect personal information from children. If you believe a child
