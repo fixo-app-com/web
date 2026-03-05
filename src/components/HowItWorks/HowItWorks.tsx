@@ -10,16 +10,21 @@ interface Step {
 const steps: Step[] = [
   {
     step: "01",
+    title: "Sign up in seconds",
+    desc: "Create your account instantly with Apple, Google, or email — no forms, no friction.",
+  },
+  {
+    step: "02",
     title: "Name your wallets",
     desc: "Create a wallet for each account you pay bills from — no linking required, just a name.",
   },
   {
-    step: "02",
+    step: "03",
     title: "Organize by category",
     desc: "Group your fixed costs into categories like Housing, Transport, Insurance, or Subscriptions.",
   },
   {
-    step: "03",
+    step: "04",
     title: "See your real picture",
     desc: "Instantly know how much of your income is locked in, per category and per account.",
   },
@@ -40,11 +45,11 @@ export default function HowItWorks(): React.JSX.Element {
             How it works
           </h2>
           <p className="text-gray-500 text-lg">
-            Three steps to full clarity on your fixed costs.
+            Four steps to full clarity on your fixed costs.
           </p>
         </motion.div>
 
-        <div className="space-y-12 sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-12">
+        <div className="space-y-12 sm:space-y-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-12">
           {steps.map((s: Step, i: number) => (
             <motion.div
               key={s.step}

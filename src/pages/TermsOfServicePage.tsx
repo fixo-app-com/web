@@ -12,7 +12,7 @@ export default function TermsOfServicePage(): React.JSX.Element {
         <div className="bg-white rounded-2xl border border-gray-100 p-8">
           <h1 className="text-3xl font-bold mb-2">Terms of Service</h1>
           <p className="text-sm text-gray-400 mb-8">
-            Effective date: February 28, 2026
+            Effective date: March 5, 2026
           </p>
 
           <section className="mb-8">
@@ -40,12 +40,20 @@ export default function TermsOfServicePage(): React.JSX.Element {
 
           <section className="mb-8">
             <h2 className="text-xl font-semibold mb-3">3. User Accounts</h2>
+            <p className="text-gray-600 leading-relaxed mb-3">
+              You must create an account to use Fixo. You may register using
+              email/password, Sign in with Apple, or Sign in with Google. You
+              are responsible for maintaining the confidentiality of your account
+              credentials and for all activity that occurs under your account.
+              You must provide accurate and complete information when creating
+              your account and notify us immediately of any unauthorized use.
+            </p>
             <p className="text-gray-600 leading-relaxed">
-              You must create an account to use Fixo. You are responsible for
-              maintaining the confidentiality of your account credentials and for
-              all activity that occurs under your account. You must provide
-              accurate and complete information when creating your account and
-              notify us immediately of any unauthorized use.
+              When you authenticate through Apple or Google, your use of those
+              services is governed by their respective terms and privacy
+              policies. Fixo is not responsible for the practices of third-party
+              authentication providers. You may revoke Fixo's access at any time
+              from your Apple ID or Google Account settings.
             </p>
           </section>
 
@@ -108,8 +116,12 @@ export default function TermsOfServicePage(): React.JSX.Element {
             <p className="text-gray-600 leading-relaxed">
               We may suspend or terminate your access to the App at any time,
               with or without cause, and with or without notice. You may delete
-              your account at any time from within the App. Upon termination, all
-              data associated with your account will be permanently deleted.
+              your account at any time from within the App's Settings. Upon
+              deletion, all data associated with your account — including
+              expenses, categories, wallets, and personal information — will be
+              permanently removed from our servers. If you signed up using Sign
+              in with Apple or Sign in with Google, we recommend also revoking
+              Fixo's access from your Apple ID or Google Account settings.
             </p>
           </section>
 
