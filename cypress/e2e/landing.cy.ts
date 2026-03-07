@@ -21,25 +21,25 @@ describe("Landing page", () => {
   });
 
   it("renders the features section", () => {
-    cy.contains("Built for what matters").should("exist");
-    cy.contains("Only Fixed Costs").should("exist");
-    cy.contains("Income Clarity").should("exist");
-    cy.contains("Per-Wallet Breakdown").should("exist");
+    cy.contains("Why Fixo is different").should("exist");
+    cy.contains("Set It Once").should("exist");
+    cy.contains("See Your Real Freedom").should("exist");
+    cy.contains("Per-Wallet Clarity").should("exist");
   });
 
   it("renders the how it works section", () => {
     cy.contains("How it works").should("exist");
-    cy.contains("Name your wallets").should("exist");
-    cy.contains("Organize by category").should("exist");
-    cy.contains("See your real picture").should("exist");
+    cy.contains("Create your account").should("exist");
+    cy.contains("Add your wallets").should("exist");
+    cy.contains("Enter your fixed costs").should("exist");
   });
 
   it("renders the testimonial section", () => {
-    cy.contains("72% of my salary was already committed").should("exist");
+    cy.contains("every expense tracker out there but always quit").should("exist");
   });
 
   it("renders the CTA section", () => {
-    cy.contains("Know your real budget").should("exist");
+    cy.contains("Know where your money really goes").should("exist");
   });
 
   it("renders the footer with copyright", () => {
