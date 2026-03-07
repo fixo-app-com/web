@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function SupportPage(): React.JSX.Element {
   useEffect(() => {
-    document.title = "Support — Fixo";
+    document.title = "Support | Fixo";
   }, []);
 
   return (
@@ -37,7 +37,7 @@ export default function SupportPage(): React.JSX.Element {
             </p>
             <ul className="list-disc pl-5 text-gray-600 leading-relaxed space-y-2">
               <li>
-                <strong>Apple "Hide My Email"</strong> — if you chose to hide
+                <strong>Apple "Hide My Email"</strong>: if you chose to hide
                 your email during Apple sign-in, Fixo receives a unique private
                 relay address (e.g. abc123@privaterelay.appleid.com). All our
                 emails will be sent to this relay and forwarded to your real
@@ -46,12 +46,12 @@ export default function SupportPage(): React.JSX.Element {
                   Hide My Email</strong> on your Apple device.
               </li>
               <li>
-                <strong>Google account</strong> — we receive your name, email,
+                <strong>Google account</strong>: we receive your name, email,
                 and profile picture from Google, used solely to create and
                 identify your Fixo account.
               </li>
               <li>
-                <strong>Switching sign-in methods</strong> — your account is
+                <strong>Switching sign-in methods</strong>: your account is
                 linked to the method you used to sign up. If you need to change
                 your sign-in method, contact us at{" "}
                 <a

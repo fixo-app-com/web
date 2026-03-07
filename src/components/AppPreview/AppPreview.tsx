@@ -26,7 +26,7 @@ function PhoneFrame({
 }
 
 /* ------------------------------------------------------------------ */
-/*  Screen 1 — Home                                                    */
+/*  Screen 1 -Home                                                    */
 /* ------------------------------------------------------------------ */
 function HomeScreen(): React.JSX.Element {
   const categories = [
@@ -38,63 +38,70 @@ function HomeScreen(): React.JSX.Element {
   const total = categories.reduce((s, c) => s + c.total, 0);
   const budget = 2000;
   const available = budget - total;
+  const usedPercent = Math.round((total / budget) * 100);
 
   return (
     <div className="px-3 pb-4">
-      <p className="text-lg font-bold text-gray-900 mb-3">Home</p>
-      <div className="bg-white rounded-2xl p-3 mb-3">
-        <div className="flex items-center gap-1 mb-1">
-          <p className="text-[10px] font-medium text-gray-500">
-            Monthly budget
-          </p>
-          <svg
-            className="w-2.5 h-2.5 text-gray-400"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931z" />
-          </svg>
+      <div className="flex items-center justify-between mb-3">
+        <p className="text-lg font-bold text-gray-900">Home</p>
+        <div className="flex gap-1">
+          <span className="px-2 py-0.5 bg-fixo-100 text-fixo-600 text-[9px] font-bold rounded-lg">
+            Monthly
+          </span>
+          <span className="px-2 py-0.5 bg-white text-gray-400 text-[9px] font-bold rounded-lg">
+            Yearly
+          </span>
         </div>
-        <p className="text-2xl font-bold text-gray-900 text-center my-2">
+      </div>
+
+      {/* Budget card with progress bar */}
+      <div className="bg-white rounded-2xl p-3 mb-3">
+        <p className="text-[10px] font-medium text-gray-400 mb-0.5">Budget</p>
+        <p className="text-2xl font-bold text-gray-900 mb-2">
           €{budget.toLocaleString("en")}
         </p>
-        <div className="border-t border-gray-100 pt-2 space-y-1">
-          <div className="flex justify-between">
-            <span className="text-[10px] text-gray-500">Ordinary costs</span>
-            <span className="text-[10px] font-semibold text-gray-700">
+        {/* Progress bar */}
+        <div className="h-2.5 bg-gray-100 rounded-full mb-2 overflow-hidden">
+          <div
+            className="h-full rounded-full bg-emerald-500"
+            style={{ width: `${usedPercent}%` }}
+          />
+        </div>
+        <div className="flex justify-between text-[9px]">
+          <span className="text-gray-400">{usedPercent}% committed</span>
+          <span className="font-semibold text-emerald-600">
+            €{available} left
+          </span>
+        </div>
+        <div className="border-t border-gray-50 mt-2 pt-2 flex gap-2">
+          <div className="flex-1 bg-gray-50 rounded-xl px-2 py-1.5 text-center">
+            <p className="text-[8px] text-gray-400">Costs</p>
+            <p className="text-[11px] font-bold text-red-500">
               €{total.toLocaleString("en")}
-            </span>
+            </p>
           </div>
-          <div className="flex justify-between">
-            <span className="text-[10px] text-gray-500">Available</span>
-            <span className="text-[10px] font-semibold text-emerald-600">
+          <div className="flex-1 bg-gray-50 rounded-xl px-2 py-1.5 text-center">
+            <p className="text-[8px] text-gray-400">Available</p>
+            <p className="text-[11px] font-bold text-emerald-600">
               €{available.toLocaleString("en")}
-            </span>
+            </p>
           </div>
         </div>
       </div>
-      <div className="flex gap-2 mb-3">
-        <span className="px-2.5 py-1 bg-fixo-100 text-fixo-600 text-[10px] font-bold rounded-xl">
-          Monthly
-        </span>
-        <span className="px-2.5 py-1 bg-white text-gray-500 text-[10px] font-bold rounded-xl">
-          Yearly
-        </span>
-      </div>
-      <div className="space-y-2">
+
+      {/* Categories */}
+      <div className="space-y-1.5">
         {categories.map((c) => (
           <div
             key={c.name}
-            className="flex items-center gap-2 bg-white rounded-2xl px-3 py-2.5"
+            className="flex items-center gap-2 bg-white rounded-2xl px-3 py-2"
           >
             <span className="text-base">{c.emoji}</span>
             <div className="flex-1 min-w-0">
               <p className="text-[11px] font-semibold text-gray-900 truncate">
                 {c.name}
               </p>
-              <p className="text-[9px] text-gray-500">
+              <p className="text-[9px] text-gray-400">
                 {c.count} expense{c.count > 1 ? "s" : ""}
               </p>
             </div>
@@ -102,7 +109,7 @@ function HomeScreen(): React.JSX.Element {
               €{c.total}
             </p>
             <svg
-              className="w-3 h-3 text-gray-400 shrink-0"
+              className="w-3 h-3 text-gray-300 shrink-0"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -118,43 +125,53 @@ function HomeScreen(): React.JSX.Element {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Screen 2 — Wallets                                                 */
+/*  Screen 2 -Wallets                                                 */
 /* ------------------------------------------------------------------ */
 function WalletsScreen(): React.JSX.Element {
   const wallets = [
-    { abbr: "IS", name: "Intesa Sanpaolo", total: 720, color: "#007A33" },
-    { abbr: "N2", name: "N26", total: 385, color: "#36A18B" },
-    { abbr: "RE", name: "Revolut", total: 210, color: "#0075EB" },
-    { abbr: "WI", name: "Wise", total: 130, color: "#9FE870" },
+    { icon: "🏦", name: "Intesa Sanpaolo", total: 720, color: "#007A33" },
+    { icon: "💳", name: "N26", total: 385, color: "#36A18B" },
+    { icon: "💜", name: "Revolut", total: 210, color: "#0075EB" },
+    { icon: "💚", name: "Wise", total: 130, color: "#9FE870" },
   ];
 
   return (
     <div className="px-3 pb-4">
-      <p className="text-lg font-bold text-gray-900 mb-4">Wallets</p>
-      <div className="space-y-2">
+      <div className="flex items-center justify-between mb-3">
+        <p className="text-lg font-bold text-gray-900">Wallets</p>
+        <div className="flex gap-1">
+          <span className="px-2 py-0.5 bg-fixo-100 text-fixo-600 text-[9px] font-bold rounded-lg">
+            Monthly
+          </span>
+          <span className="px-2 py-0.5 bg-white text-gray-400 text-[9px] font-bold rounded-lg">
+            Yearly
+          </span>
+        </div>
+      </div>
+
+      <div className="space-y-1.5">
         {wallets.map((w) => (
           <div
             key={w.name}
-            className="flex items-center gap-2.5 bg-white rounded-2xl px-3 py-3"
+            className="flex items-center gap-2.5 bg-white rounded-2xl px-3 py-2.5"
           >
             <div
               className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
               style={{ backgroundColor: w.color }}
             >
-              <span className="text-[9px] font-bold text-white">
-                {w.abbr}
-              </span>
+              <span className="text-sm">{w.icon}</span>
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-[11px] font-semibold text-gray-900 truncate">
                 {w.name}
               </p>
+              <p className="text-[9px] text-gray-400">Per month</p>
             </div>
             <p className="text-[11px] font-semibold text-gray-900">
               €{w.total}
             </p>
             <svg
-              className="w-3 h-3 text-gray-400 shrink-0"
+              className="w-3 h-3 text-gray-300 shrink-0"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -165,8 +182,18 @@ function WalletsScreen(): React.JSX.Element {
           </div>
         ))}
       </div>
-      <div className="flex justify-end mt-6">
-        <div className="bg-fixo-500 rounded-full px-4 py-2 flex items-center">
+
+      <div className="flex justify-center mt-5">
+        <div className="bg-fixo-500 rounded-full px-5 py-2 flex items-center gap-1.5">
+          <svg
+            className="w-3 h-3 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2.5}
+          >
+            <path d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
           <span className="text-white text-[10px] font-semibold">
             Add wallet
           </span>
@@ -177,47 +204,90 @@ function WalletsScreen(): React.JSX.Element {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Screen 3 — Emergency Fund                                         */
+/*  Screen 3 -Emergency Fund                                         */
 /* ------------------------------------------------------------------ */
 function EmergencyScreen(): React.JSX.Element {
+  const essentialCount = 8;
   const essentialMonthly = 1170;
   const months = 6;
   const target = essentialMonthly * months;
 
+  const topExpenses = [
+    { name: "Rent", amount: 650 },
+    { name: "Car insurance", amount: 180 },
+    { name: "Health insurance", amount: 120 },
+  ];
+
   return (
     <div className="px-3 pb-4">
-      <p className="text-lg font-bold text-gray-900 mb-4">Emergency</p>
-      <p className="text-[10px] font-medium text-gray-500 mb-0.5">
-        Monthly essential expenses
+      <p className="text-lg font-bold text-gray-900 mb-1">Emergency Fund</p>
+      <p className="text-[9px] text-gray-400 mb-3">
+        Your safety net based on essential expenses
       </p>
-      <p className="text-xl font-bold text-gray-900 mb-6">
-        €{essentialMonthly.toLocaleString("en")}
+
+      {/* Summary card */}
+      <div className="bg-white rounded-2xl p-3 mb-3 flex gap-2">
+        <div className="flex-1 text-center">
+          <p className="text-xl font-bold text-gray-900">{essentialCount}</p>
+          <p className="text-[8px] text-gray-400">Essential expenses</p>
+        </div>
+        <div className="w-px bg-gray-100" />
+        <div className="flex-1 text-center">
+          <p className="text-xl font-bold text-fixo-500">
+            €{essentialMonthly.toLocaleString("en")}
+          </p>
+          <p className="text-[8px] text-gray-400">Monthly cost</p>
+        </div>
+      </div>
+
+      {/* Coverage period */}
+      <p className="text-[9px] font-semibold text-gray-400 uppercase tracking-wide mb-2">
+        Your target
       </p>
-      <p className="text-[10px] font-medium text-gray-500 mb-2">
-        Time period
-      </p>
-      <div className="relative mb-1.5">
-        <div className="h-1 bg-gray-200 rounded-full">
+      <div className="bg-white rounded-2xl p-3 mb-3">
+        <div className="relative mb-2">
+          <div className="h-1.5 bg-gray-100 rounded-full">
+            <div
+              className="h-full bg-fixo-400 rounded-full"
+              style={{ width: "30%" }}
+            />
+          </div>
           <div
-            className="h-full bg-fixo-400 rounded-full"
-            style={{ width: "30%" }}
+            className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-fixo-400 rounded-full border-2 border-white shadow"
+            style={{ left: "calc(30% - 8px)" }}
           />
         </div>
-        <div
-          className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-fixo-400 rounded-full border-2 border-white shadow"
-          style={{ left: "calc(30% - 8px)" }}
-        />
-      </div>
-      <p className="text-[11px] font-semibold text-gray-700 text-center mb-6">
-        {months} months
-      </p>
-      <div className="bg-white rounded-2xl p-4">
-        <p className="text-[10px] font-medium text-gray-500 mb-1">
-          Emergency fund target
+        <p className="text-[11px] font-semibold text-gray-700 text-center mb-3">
+          {months} months
         </p>
-        <p className="text-2xl font-bold text-fixo-500">
+        <p className="text-2xl font-bold text-fixo-500 text-center">
           €{target.toLocaleString("en")}
         </p>
+        <p className="text-[8px] text-gray-400 text-center mt-1">
+          {essentialCount} expenses × €{essentialMonthly} × {months} months
+        </p>
+      </div>
+
+      {/* Top expenses */}
+      <p className="text-[9px] font-semibold text-gray-400 uppercase tracking-wide mb-2">
+        Top expenses
+      </p>
+      <div className="bg-white rounded-2xl p-3">
+        {topExpenses.map((e, i) => (
+          <div key={e.name}>
+            <div className="flex justify-between py-1.5">
+              <span className="text-[10px] font-medium text-gray-700">
+                {e.name}
+              </span>
+              <span className="text-[10px] font-semibold text-gray-900">
+                €{e.amount}
+              </span>
+            </div>
+            {i < topExpenses.length - 1 && (
+              <div className="border-t border-gray-50" />
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -268,7 +338,7 @@ function useSnapIndex(ref: React.RefObject<HTMLDivElement | null>, count: number
 }
 
 /* ------------------------------------------------------------------ */
-/*  Mobile slider — native scroll-snap, draggable                     */
+/*  Mobile slider -native scroll-snap, draggable                     */
 /* ------------------------------------------------------------------ */
 function MobileSlider(): React.JSX.Element {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -318,7 +388,7 @@ function MobileSlider(): React.JSX.Element {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Desktop layout — all 3 side by side                                */
+/*  Desktop layout -all 3 side by side                                */
 /* ------------------------------------------------------------------ */
 function DesktopLayout(): React.JSX.Element {
   return (

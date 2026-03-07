@@ -11,19 +11,19 @@ interface Review {
 const reviews: Review[] = [
   {
     quote:
-      "I thought I knew my expenses — then Fixo showed me that 72% of my salary was already committed before I spent a cent.",
+      "I tried every expense tracker out there but always quit after a week. Who has time to log every purchase? Fixo only asked for my fixed costs and I was done in five minutes.",
     author: "Marco R.",
     role: "Freelancer",
   },
   {
     quote:
-      "Most apps want me to log every coffee. Fixo only cares about the bills I can't skip — and that's exactly what I needed.",
+      "I didn't need another app nagging me to scan receipts. Fixo showed me that 70% of my salary was already spoken for before I spent a cent on anything else.",
     author: "Elena T.",
     role: "Product Designer",
   },
   {
     quote:
-      "I have three bank accounts and never knew which one was hit hardest. Now I see the full picture at a glance.",
+      "Three bank accounts, a dozen subscriptions, rent, insurance. I never had the full picture. Now I set it up once and Fixo does the rest.",
     author: "James L.",
     role: "Software Engineer",
   },
@@ -99,7 +99,7 @@ export default function Testimonial(): React.JSX.Element {
                   &ldquo;{review.quote}&rdquo;
                 </blockquote>
                 <p className="text-fixo-600 font-medium">
-                  {review.author} — {review.role}
+                  {review.author}, {review.role}
                 </p>
               </div>
             ))}

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function PrivacyPolicyPage(): React.JSX.Element {
   useEffect(() => {
-    document.title = "Privacy Policy — Fixo";
+    document.title = "Privacy Policy | Fixo";
   }, []);
 
   return (
@@ -29,23 +29,23 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
             </h2>
             <ul className="list-disc pl-5 text-gray-600 leading-relaxed space-y-2">
               <li>
-                <strong>Account information</strong> — email address and
+                <strong>Account information</strong>: email address and
                 authentication credentials via Firebase Auth. You may sign in
                 using email/password, Sign in with Apple, or Sign in with
                 Google. When you use a third-party sign-in provider, we
                 receive the name and email address associated with that
                 account. If you use Apple's "Hide My Email" feature, we
                 receive an Apple private relay email address instead of your
-                personal email — this relay address functions as your account
+                personal email. This relay address functions as your account
                 email within Fixo and forwards messages to your real address.
                 We do not receive or store your third-party account password.
               </li>
               <li>
-                <strong>Financial data you enter</strong> — expenses,
+                <strong>Financial data you enter</strong>: expenses,
                 categories, wallets, budget settings, and currency preferences.
               </li>
               <li>
-                <strong>Crash data</strong> — we use Firebase Crashlytics to
+                <strong>Crash data</strong>: we use Firebase Crashlytics to
                 automatically collect anonymous crash reports and diagnostic
                 information when the app encounters an error. This data is not
                 linked to your identity and is used solely to improve app
@@ -65,7 +65,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
             </h2>
             <p className="text-gray-600 leading-relaxed">
               We use the information you provide solely to operate and improve
-              the Fixo service — authenticating your account and storing your
+              the Fixo service: authenticating your account and storing your
               expense data so it syncs across your devices. We do not use your
               data for advertising, analytics, or any form of tracking.
             </p>
@@ -103,7 +103,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
             </p>
             <ul className="list-disc pl-5 text-gray-600 leading-relaxed space-y-2">
               <li>
-                <strong>Sign in with Apple</strong> — Apple shares your name
+                <strong>Sign in with Apple</strong>: Apple shares your name
                 and email address (or a private relay address if you choose
                 "Hide My Email") with Fixo. Apple does not provide us with any
                 other data from your Apple account. Your use of Sign in with
@@ -119,7 +119,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
                 .
               </li>
               <li>
-                <strong>Sign in with Google</strong> — Google shares your name,
+                <strong>Sign in with Google</strong>: Google shares your name,
                 email address, and profile picture with Fixo. We use this
                 information solely for account creation and identification. Your
                 use of Sign in with Google is subject to{" "}
@@ -159,7 +159,7 @@ export default function PrivacyPolicyPage(): React.JSX.Element {
               </a>{" "}
               and we will process your request within 30 days. If you signed up
               via Apple or Google, deleting your Fixo account also removes all
-              data we hold — you may additionally revoke Fixo's access from
+              data we hold. You may additionally revoke Fixo's access from
               your Apple ID or Google Account settings.
             </p>
           </section>

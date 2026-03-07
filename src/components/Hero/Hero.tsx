@@ -12,7 +12,7 @@ export default function Hero(): React.JSX.Element {
           custom={0}
           className="inline-block mb-6 px-4 py-1.5 bg-fixo-100 text-fixo-600 rounded-full text-sm font-semibold border border-fixo-200"
         >
-          Not another expense tracker — just your fixed costs
+          Not another daily expense tracker
         </motion.div>
 
         <motion.h1
@@ -34,9 +34,9 @@ export default function Hero(): React.JSX.Element {
           custom={2}
           className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Fixo focuses on the bills you can&apos;t escape — rent, insurance,
-          subscriptions, loans. Map every fixed monthly cost, see which wallet
-          it hits, and finally understand how much you truly have left.
+          Forget logging every coffee and sandwich. Fixo maps the bills you
+          can't escape: rent, insurance, subscriptions, loans. See which
+          account each one hits, so your paycheck always lands in the right place.
         </motion.p>
 
         <motion.div
@@ -48,7 +48,9 @@ export default function Hero(): React.JSX.Element {
         >
           {/* App Store placeholder badge */}
           <a
-            href="#"
+            href="https://apps.apple.com/it/app/fixo/id6759840216"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gray-900 text-white font-semibold pl-4 pr-6 py-3 rounded-xl hover:bg-gray-800 transition-colors"
           >
             <svg

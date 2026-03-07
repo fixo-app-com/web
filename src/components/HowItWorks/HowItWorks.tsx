@@ -10,23 +10,23 @@ interface Step {
 const steps: Step[] = [
   {
     step: "01",
-    title: "Sign up in seconds",
-    desc: "Create your account instantly with Apple, Google, or email — no forms, no friction.",
+    title: "Create your account",
+    desc: "Sign up in seconds with Apple, Google, or email. No forms, no friction.",
   },
   {
     step: "02",
-    title: "Name your wallets",
-    desc: "Create a wallet for each account you pay bills from — no linking required, just a name.",
+    title: "Add your wallets",
+    desc: "Name each bank account you pay bills from: Intesa, N26, Revolut. No linking needed.",
   },
   {
     step: "03",
-    title: "Organize by category",
-    desc: "Group your fixed costs into categories like Housing, Transport, Insurance, or Subscriptions.",
+    title: "Enter your fixed costs",
+    desc: "Add your recurring expenses once: rent, utilities, insurance, streaming. That's it, you're done.",
   },
   {
     step: "04",
-    title: "See your real picture",
-    desc: "Instantly know how much of your income is locked in, per category and per account.",
+    title: "See the full picture",
+    desc: "Instantly see how much is committed, what's left, and where every penny goes. No daily effort.",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function HowItWorks(): React.JSX.Element {
             How it works
           </h2>
           <p className="text-gray-500 text-lg">
-            Four steps to full clarity on your fixed costs.
+            Set it up once, get clarity forever. No daily work.
           </p>
         </motion.div>
 

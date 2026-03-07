@@ -8,7 +8,9 @@ export default function Navbar(): React.JSX.Element {
           <img src="/logo.png" alt="Fixo" className="h-10 w-10" />
         </Link>
         <a
-          href="#cta"
+          href="https://apps.apple.com/it/app/fixo/id6759840216"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-fixo-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-fixo-600 transition-colors"
         >
           Download

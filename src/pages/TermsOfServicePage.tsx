@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function TermsOfServicePage(): React.JSX.Element {
   useEffect(() => {
-    document.title = "Terms of Service — Fixo";
+    document.title = "Terms of Service | Fixo";
   }, []);
 
   return (
@@ -117,8 +117,8 @@ export default function TermsOfServicePage(): React.JSX.Element {
               We may suspend or terminate your access to the App at any time,
               with or without cause, and with or without notice. You may delete
               your account at any time from within the App's Settings. Upon
-              deletion, all data associated with your account — including
-              expenses, categories, wallets, and personal information — will be
+              deletion, all data associated with your account, including
+              expenses, categories, wallets, and personal information, will be
               permanently removed from our servers. If you signed up using Sign
               in with Apple or Sign in with Google, we recommend also revoking
               Fixo's access from your Apple ID or Google Account settings.

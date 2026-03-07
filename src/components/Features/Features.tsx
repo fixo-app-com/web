@@ -10,23 +10,23 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: "📌",
-    title: "Only Fixed Costs",
-    desc: "No daily coffee tracking. Fixo is built for the expenses you can't avoid — rent, utilities, insurance, subscriptions, loans.",
+    title: "Set It Once",
+    desc: "No daily logging, no receipts, no forgotten transactions. Add your fixed expenses once and Fixo keeps track forever.",
   },
   {
     icon: "💰",
-    title: "Income Clarity",
-    desc: "See at a glance how much of your monthly income is already committed to fixed costs, and how much you truly have left.",
+    title: "See Your Real Freedom",
+    desc: "Know instantly how much of your paycheck is already spoken for, and how much you actually get to decide how to spend.",
   },
   {
     icon: "🏦",
-    title: "Per-Wallet Breakdown",
-    desc: "Create wallets for your accounts and assign each expense to one. See how much flows out of each wallet every month — no bank linking needed.",
+    title: "Per-Wallet Clarity",
+    desc: "Assign expenses to the accounts you pay from. See at a glance how much flows out of each bank, no linking required.",
   },
   {
     icon: "🛡️",
-    title: "Emergency Fund",
-    desc: "Mark expenses as essential and let Fixo calculate how much you need to save for 3 to 60 months of safety net.",
+    title: "Emergency Ready",
+    desc: "Mark expenses as essential and Fixo calculates your safety net. Know exactly how much you need saved for 3 to 60 months.",
   },
 ];
 
@@ -42,11 +42,12 @@ export default function Features(): React.JSX.Element {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 text-gray-900">
-            Built for what matters
+            Why Fixo is different
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            Fixo doesn&apos;t track every purchase — it gives you full
-            transparency on the recurring costs that silently eat your income.
+            Traditional trackers make you log every purchase. Fixo takes a
+            smarter approach: track only the fixed costs that eat your income
+            on autopilot.
           </p>
         </motion.div>
 

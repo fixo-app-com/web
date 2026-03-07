@@ -17,15 +17,17 @@ export default function CallToAction(): React.JSX.Element {
           className="h-16 w-16 mx-auto mb-6"
         />
         <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
-          Know your real budget
+          Know where your money really goes
         </h2>
         <p className="text-gray-500 text-lg mb-8 max-w-md mx-auto">
-          Map every fixed cost in minutes and see how much of your income is
-          truly yours. Free, no credit card required.
+          Add your fixed costs once. See your real financial picture in minutes.
+          No daily logging, no manual tracking. Just clarity.
         </p>
         {/* App Store placeholder badge */}
         <a
-          href="#"
+          href="https://apps.apple.com/it/app/fixo/id6759840216"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-gray-900 text-white font-semibold pl-4 pr-6 py-3 rounded-xl hover:bg-gray-800 transition-colors"
         >
           <svg
