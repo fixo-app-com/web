@@ -8,10 +8,11 @@ describe("HowItWorks", () => {
     expect(screen.getByText("How it works")).toBeInTheDocument();
   });
 
-  it("renders all three steps", () => {
+  it("renders all four steps", () => {
     render(<HowItWorks />);
-    expect(screen.getByText("Name your wallets")).toBeInTheDocument();
-    expect(screen.getByText("Organize by category")).toBeInTheDocument();
-    expect(screen.getByText("See your real picture")).toBeInTheDocument();
+    expect(screen.getByText("Create your account")).toBeInTheDocument();
+    expect(screen.getByText("Add your wallets")).toBeInTheDocument();
+    expect(screen.getByText("Enter your fixed costs")).toBeInTheDocument();
+    expect(screen.getByText("See the full picture")).toBeInTheDocument();
   });
 });

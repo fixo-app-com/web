@@ -6,7 +6,7 @@ describe("Testimonial", () => {
   it("renders the first testimonial quote", () => {
     render(<Testimonial />);
     expect(
-      screen.getByText(/72% of my salary was already committed/),
+      screen.getByText(/every expense tracker out there but always quit/),
     ).toBeInTheDocument();
   });
 
