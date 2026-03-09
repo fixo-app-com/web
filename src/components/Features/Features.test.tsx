@@ -10,8 +10,8 @@ describe("Features", () => {
 
   it("renders all four features", () => {
     render(<Features />);
+    expect(screen.getByText("Every Frequency, One View")).toBeInTheDocument();
     expect(screen.getByText("Set It Once")).toBeInTheDocument();
-    expect(screen.getByText("See Your Real Freedom")).toBeInTheDocument();
     expect(screen.getByText("Per-Wallet Clarity")).toBeInTheDocument();
     expect(screen.getByText("Emergency Ready")).toBeInTheDocument();
   });

@@ -23,7 +23,7 @@ describe("Landing page", () => {
   it("renders the features section", () => {
     cy.contains("Why Fixo is different").should("exist");
     cy.contains("Set It Once").should("exist");
-    cy.contains("See Your Real Freedom").should("exist");
+    cy.contains("Every Frequency, One View").should("exist");
     cy.contains("Per-Wallet Clarity").should("exist");
   });
 
@@ -35,7 +35,7 @@ describe("Landing page", () => {
   });
 
   it("renders the testimonial section", () => {
-    cy.contains("every expense tracker out there but always quit").should("exist");
+    cy.contains("Surprised by that bill you forgot about").should("exist");
   });
 
   it("renders the CTA section", () => {

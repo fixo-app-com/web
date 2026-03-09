@@ -34,9 +34,9 @@ export default function Hero(): React.JSX.Element {
           custom={2}
           className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          No daily logging needed. Fixo maps only the costs you can't
-          avoid: rent, insurance, subscriptions, loans. Once those are clear,
-          every penny left is yours — enjoy life or build your safety net.
+          Yearly insurance, quarterly bills, monthly rent. Fixo maps every
+          fixed cost and breaks it down month by month. No surprises, no
+          guesswork. Just what's committed and what's truly yours to spend.
         </motion.p>
 
         <motion.div

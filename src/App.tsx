@@ -17,7 +17,7 @@ function ScrollToTop(): null {
 
 function App(): React.JSX.Element {
   return (
-    <div className="min-h-screen text-gray-900 overflow-x-hidden">
+    <div className="min-h-screen text-gray-900 overflow-x-clip">
       <ScrollToTop />
       <Navbar />
       <Routes>

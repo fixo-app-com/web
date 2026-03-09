@@ -9,14 +9,14 @@ interface Feature {
 
 const features: Feature[] = [
   {
+    icon: "📅",
+    title: "Every Frequency, One View",
+    desc: "Yearly insurance, quarterly electricity, monthly rent. Fixo converts every cost to a single monthly view so you always know the real weight on your income.",
+  },
+  {
     icon: "📌",
     title: "Set It Once",
     desc: "No daily logging, no receipts, no forgotten transactions. Add your fixed expenses once and Fixo keeps track forever.",
-  },
-  {
-    icon: "💰",
-    title: "See Your Real Freedom",
-    desc: "Know instantly how much of your paycheck is already spoken for, and how much you actually get to decide how to spend.",
   },
   {
     icon: "🏦",
@@ -46,7 +46,7 @@ export default function Features(): React.JSX.Element {
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
             Other apps track what you spend. Fixo focuses on what you
-            owe — so you always know what's committed and what's free
+            owe, so you always know what's committed and what's free
             to use however you want.
           </p>
         </motion.div>

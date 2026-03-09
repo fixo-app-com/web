@@ -1,124 +1,68 @@
-import { useRef, useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { fadeUp } from "../animations";
 
-interface Review {
-  quote: string;
-  author: string;
-  role: string;
+interface PainPoint {
+  question: string;
+  answer: string;
 }
 
-const reviews: Review[] = [
+const painPoints: PainPoint[] = [
   {
-    quote:
-      "I tried every expense tracker out there but always quit after a week. Who has time to log every purchase? Fixo only asked for my fixed costs and I was done in five minutes.",
-    author: "Marco R.",
-    role: "Freelancer",
+    question: "Surprised by that bill you forgot about?",
+    answer: "Car insurance once a year, electricity every quarter. Fixo breaks every cost down to a monthly view so nothing catches you off guard.",
   },
   {
-    quote:
-      "I didn't need another app nagging me to scan receipts. Fixo showed me that 70% of my salary was already spoken for before I spent a cent on anything else.",
-    author: "Elena T.",
-    role: "Product Designer",
+    question: "Lost in complex budgets?",
+    answer: "One number tells you everything: what's left after your bills. That's your real spending power.",
   },
   {
-    quote:
-      "Three bank accounts, a dozen subscriptions, rent, insurance. I never had the full picture. Now I set it up once and Fixo does the rest.",
-    author: "James L.",
-    role: "Software Engineer",
+    question: "Tired of logging every coffee?",
+    answer: "Fixo only tracks what's fixed. Add your costs once and instantly see how much of your income is committed and how much is actually yours to spend.",
   },
 ];
 
-function useSnapIndex(
-  ref: React.RefObject<HTMLDivElement | null>,
-  count: number,
-) {
-  const [active, setActive] = useState(0);
-
-  const onScroll = useCallback(() => {
-    const el = ref.current;
-    if (!el) return;
-    const itemWidth = el.scrollWidth / count;
-    const idx = Math.round(el.scrollLeft / itemWidth);
-    setActive(Math.min(Math.max(idx, 0), count - 1));
-  }, [ref, count]);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    el.addEventListener("scroll", onScroll, { passive: true });
-    return () => el.removeEventListener("scroll", onScroll);
-  }, [ref, onScroll]);
-
-  const scrollTo = useCallback(
-    (idx: number) => {
-      const el = ref.current;
-      if (!el) return;
-      const itemWidth = el.scrollWidth / count;
-      el.scrollTo({ left: itemWidth * idx, behavior: "smooth" });
-    },
-    [ref, count],
-  );
-
-  return { active, scrollTo };
-}
-
 export default function Testimonial(): React.JSX.Element {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const { active, scrollTo } = useSnapIndex(scrollRef, reviews.length);
-
   return (
     <section className="px-6 py-24 bg-fixo-50 border-y border-fixo-100">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          className="text-center mb-14"
         >
-          <p className="text-fixo-500 text-sm font-semibold uppercase tracking-wider mb-8">
-            Why people love Fixo
+          <p className="text-fixo-500 text-sm font-semibold uppercase tracking-wider mb-3">
+            Sounds familiar?
           </p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
+            The problems you already know
+          </h2>
+        </motion.div>
 
-          {/* Snap-scroll track */}
-          <div
-            ref={scrollRef}
-            className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth"
-            style={{
-              scrollbarWidth: "none",
-              WebkitOverflowScrolling: "touch",
-              msOverflowStyle: "none",
-            }}
-          >
-            {reviews.map((review, i) => (
-              <div
-                key={i}
-                className="snap-center shrink-0 w-full px-2"
-              >
-                <blockquote className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug mb-6">
-                  &ldquo;{review.quote}&rdquo;
-                </blockquote>
-                <p className="text-fixo-600 font-medium">
-                  {review.author}, {review.role}
+        <div className="grid gap-6 sm:gap-8">
+          {painPoints.map((p, i) => (
+            <motion.div
+              key={i}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={i}
+              className="bg-white rounded-2xl p-8 sm:p-10 border border-gray-100"
+            >
+              <p className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+                &ldquo;{p.question}&rdquo;
+              </p>
+              <div className="flex items-start gap-3">
+                <span className="text-fixo-500 font-bold text-lg mt-0.5 shrink-0">&rarr;</span>
+                <p className="text-gray-500 text-base sm:text-lg leading-relaxed">
+                  {p.answer}
                 </p>
               </div>
-            ))}
-          </div>
-
-          {/* Dots */}
-          <div className="flex justify-center gap-2.5 mt-8">
-            {reviews.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => scrollTo(i)}
-                aria-label={`Go to review ${i + 1}`}
-                className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                  i === active ? "bg-fixo-500" : "bg-fixo-200"
-                }`}
-              />
-            ))}
-          </div>
-        </motion.div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ body {
 
 @theme {
   --font-sans:
-    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
   --color-fixo-50: #eef2ff;
   --color-fixo-100: #e0e7ff;
