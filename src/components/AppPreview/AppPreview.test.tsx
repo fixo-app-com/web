@@ -10,10 +10,10 @@ describe("AppPreview", () => {
 
   it("renders phone screen content", () => {
     render(<AppPreview />);
-    expect(screen.getAllByText("Housing").length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText("Transport").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("Overview").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("Rent").length).toBeGreaterThanOrEqual(1);
     expect(
-      screen.getAllByText("Subscriptions").length,
+      screen.getAllByText("Emergency Fund").length,
     ).toBeGreaterThanOrEqual(1);
   });
 

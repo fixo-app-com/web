@@ -45,9 +45,9 @@ export default function Features(): React.JSX.Element {
             Why Fixo is different
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            Traditional trackers make you log every purchase. Fixo takes a
-            smarter approach: track only the fixed costs that eat your income
-            on autopilot.
+            Other apps track what you spend. Fixo focuses on what you
+            owe — so you always know what's committed and what's free
+            to use however you want.
           </p>
         </motion.div>
 

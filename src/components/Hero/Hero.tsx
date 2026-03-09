@@ -34,9 +34,9 @@ export default function Hero(): React.JSX.Element {
           custom={2}
           className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Forget logging every coffee and sandwich. Fixo maps the bills you
-          can't escape: rent, insurance, subscriptions, loans. See which
-          account each one hits, so your paycheck always lands in the right place.
+          No daily logging needed. Fixo maps only the costs you can't
+          avoid: rent, insurance, subscriptions, loans. Once those are clear,
+          every penny left is yours — enjoy life or build your safety net.
         </motion.p>
 
         <motion.div

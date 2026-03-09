@@ -17,7 +17,7 @@ describe("Landing page", () => {
 
   it("renders the app preview with phone screens", () => {
     cy.contains("Everything at a glance").should("exist");
-    cy.contains("Housing").should("exist");
+    cy.contains("Overview").should("exist");
   });
 
   it("renders the features section", () => {
